@@ -1,0 +1,37 @@
+{
+    "name": "proximate/queue",
+    "description": "A simple file-based queue system to send items to the crawler",
+    "require": {
+        "proximate/crawler": "dev-master",
+        "proximate/storage": "dev-master",
+        "proximate/requester": "dev-master",
+        "proximate/core": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*",
+        "mockery/mockery": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/halfer/proximate-crawler.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/halfer/proximate-storage.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/halfer/proximate-requester.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/halfer/proximate-core.git"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Proximate": "src/"
+        }
+    }
+}
