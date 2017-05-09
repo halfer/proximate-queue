@@ -17,37 +17,37 @@ class Base
     const STATUS_INVALID = 'invalid'; // Bad JSON
     const STATUS_ERROR = 'error'; // Fetch failed
 
-    protected $queueDir;
+    protected $queuePath;
     protected $fileService;
 
     /**
      * Constructor
      *
-     * @param string $queueDir
+     * @param string $queuePath
      * @param FileService $fileService
      */
-    public function __construct($queueDir, FileService $fileService)
+    public function __construct($queuePath, FileService $fileService)
     {
-        $this->init($queueDir, $fileService);
+        $this->init($queuePath, $fileService);
     }
 
     /**
      * Mockable version of the c'tor
      *
-     * @param string $queueDir
+     * @param string $queuePath
      * @param FileService $fileService
      * @throws DirectoryNotFoundException
      */
-    protected function init($queueDir, FileService $fileService)
+    protected function init($queuePath, FileService $fileService)
     {
-        if (!$fileService->isDirectory($queueDir))
+        if (!$fileService->isDirectory($queuePath))
         {
             throw new DirectoryNotFoundException(
                 "The supplied queue directory does not exist"
             );
         }
 
-        $this->queueDir = $queueDir;
+        $this->queuePath = $queuePath;
         $this->fileService = $fileService;
     }
 
@@ -61,9 +61,9 @@ class Base
         return md5($url);
     }
 
-    public function getQueueDir()
+    public function getQueuePath()
     {
-        return $this->queueDir;
+        return $this->queuePath;
     }
 
     /**

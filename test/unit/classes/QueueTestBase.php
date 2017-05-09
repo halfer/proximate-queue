@@ -34,7 +34,7 @@ abstract class QueueTestBase extends \PHPUnit_Framework_TestCase
         $queue = $this->getQueueTestHarness();
         $queue->init($dir = self::DUMMY_DIR, $this->getFileServiceMockWithBasicExpectations());
 
-        $this->assertEquals($dir, $queue->getQueueDir());
+        $this->assertEquals($dir, $queue->getQueuePath());
     }
 
     /**

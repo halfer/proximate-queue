@@ -103,7 +103,7 @@ class Write extends Base
      */
     protected function getQueueEntryPath()
     {
-        return $this->getQueueDir() . '/' . $this->getQueueEntryName($this->url, $this->pathRegex);
+        return $this->getQueuePath() . '/' . $this->getQueueEntryName($this->url, $this->pathRegex);
     }
 
     protected function getQueueEntryDetails()

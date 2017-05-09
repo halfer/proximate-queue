@@ -52,7 +52,7 @@ class Read extends Base
     protected function getNextQueueItem()
     {
         $fileService = $this->getFileService();
-        $pattern = $this->getQueueDir() . '/*.' . self::STATUS_READY;
+        $pattern = $this->getQueuePath() . '/*.' . self::STATUS_READY;
         $files = $fileService->glob($pattern);
         $data = false;
 
@@ -188,6 +188,6 @@ class Read extends Base
      */
     protected function getQueueEntryPathForRequest($url, $pathRegex, $status)
     {
-        return $this->getQueueDir() . '/' . $this->getQueueEntryName($url, $pathRegex, $status);
+        return $this->getQueuePath() . '/' . $this->getQueueEntryName($url, $pathRegex, $status);
     }
 }

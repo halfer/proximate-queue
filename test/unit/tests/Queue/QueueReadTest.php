@@ -274,9 +274,9 @@ class QueueReadTestHarness extends Queue
     }
 
     // Make this public
-    public function init($queueDir, FileService $fileService)
+    public function init($queuePath, FileService $fileService)
     {
-        parent::init($queueDir, $fileService);
+        parent::init($queuePath, $fileService);
     }
 
     // Make this public

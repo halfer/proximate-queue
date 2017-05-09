@@ -19,7 +19,7 @@ class QueueWriteTest extends QueueTestBase
         $queue = $this->getQueueTestHarness();
         $queue->init($dir = self::DUMMY_DIR, $this->getFileServiceMockWithBasicExpectations());
 
-        $this->assertEquals($dir, $queue->getQueueDir());
+        $this->assertEquals($dir, $queue->getQueuePath());
     }
 
     public function testConstructorAllowsGoodFolder()
@@ -175,9 +175,9 @@ class QueueWriteTestHarness extends Queue
     }
 
     // Make this public
-    public function init($queueDir, FileService $fileService)
+    public function init($queuePath, FileService $fileService)
     {
-        parent::init($queueDir, $fileService);
+        parent::init($queuePath, $fileService);
     }
 
     // Make this public
