@@ -34,6 +34,12 @@ if (!file_exists($queuePath))
     );
 }
 
+echo sprintf(
+    "Starting queue watcher (path=%s, proxying to %s)\n",
+    $queuePath,
+    $proxyAddress
+);
+
 $queue = new QueueReader($queuePath, new File());
 $queue->
     setFetcher(new SiteFetcherService($proxyAddress))->
