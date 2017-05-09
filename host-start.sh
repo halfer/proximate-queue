@@ -9,7 +9,7 @@ cd `dirname $0`
 ROOTDIR=`pwd`
 
 docker run \
-    -v ${ROOTDIR}/queue:/var/proximate/queue \
+    -v ${ROOTDIR}/queue:/remote/queue \
     -e PROXY_ADDRESS="localhost:8081" \
     -t \
     proximate-queue

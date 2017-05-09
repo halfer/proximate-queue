@@ -2,5 +2,5 @@
 
 php \
     /var/app/bin/queue.php \
-    --queue-path /var/proximate/queue \
+    --queue-path /remote/queue \
     --proxy-address ${PROXY_ADDRESS}
