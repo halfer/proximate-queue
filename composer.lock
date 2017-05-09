@@ -587,12 +587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/halfer/proximate-core.git",
-                "reference": "7ddd20975b4accd08763ec2d53e7ec7a17c74c78"
+                "reference": "4015d52ed0d7c7b1bf910b41ea7b8f46c950a027"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/halfer/proximate-core/zipball/7ddd20975b4accd08763ec2d53e7ec7a17c74c78",
-                "reference": "7ddd20975b4accd08763ec2d53e7ec7a17c74c78",
+                "url": "https://api.github.com/repos/halfer/proximate-core/zipball/4015d52ed0d7c7b1bf910b41ea7b8f46c950a027",
+                "reference": "4015d52ed0d7c7b1bf910b41ea7b8f46c950a027",
                 "shasum": ""
             },
             "type": "library",
@@ -606,7 +606,7 @@
                 "source": "https://github.com/halfer/proximate-core/tree/master",
                 "issues": "https://github.com/halfer/proximate-core/issues"
             },
-            "time": "2017-04-26 15:09:19"
+            "time": "2017-05-09 13:20:10"
         },
         {
             "name": "proximate/crawler",
