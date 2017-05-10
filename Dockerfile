@@ -39,5 +39,4 @@ RUN cd /var/app && php /tmp/composer.phar install --no-dev
 COPY src /var/app/src
 COPY bin/ /var/app/bin
 
-# Use Supervisor as the entry point
 ENTRYPOINT ["sh", "/var/app/bin/container-start.sh"]

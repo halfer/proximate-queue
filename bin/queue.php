@@ -2,7 +2,7 @@
 <?php
 
 /**
- * Launches the queue, will be restarted by Supervisor when it finishes
+ * Runs the queue for 100 seconds (I use Docker Composer to restart it)
  *
  * @todo Create an integration test for the queue
  */
